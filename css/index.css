@@ -96,3 +96,12 @@ margin:4px;
     0%   { transform: rotate(-15deg) }
     100% { transform: rotate(15deg) }
   }
+
+  #footer{
+      position: fixed;
+      bottom: 0;
+      width:100%;
+      z-index: 1000;
+      padding:3px;
+      background:#fffbfb;
+  }
