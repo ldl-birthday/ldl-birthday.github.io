@@ -1,0 +1,16 @@
+function run(){
+location.href="viewer.html";
+localStorage.src=document.getElementById('in').value;
+}
+function load(){
+document.getElementById('header').innerText="Đã kết nối đến "+localStorage.src;
+document.getElementById('tb').href='http://'+localStorage.src+'/'+localStorage.de+'/sync';
+document.getElementById('todo').href='http://'+localStorage.src+'/'+localStorage.de+'/sync/appbase/alertky/';
+document.getElementById('file').href='http://'+localStorage.src+'/'+localStorage.de+'/sync/fileupload.php';
+document.getElementById('cnh').href='http://'+localStorage.src+'/'+localStorage.de+'/sync/cnh.php';
+document.getElementById('el').href='http://'+localStorage.src+'/'+localStorage.de+'/sync/file/';
+}
+function out(){
+localStorage.src='';
+location.href="index.html";
+}

@@ -1,0 +1,164 @@
+<html>
+<title>Lê Danh Lam</title>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <link rel='stylesheet' href='https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link href="css/icon.css" rel="stylesheet">
+    <meta name="theme-color" content="#445566" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body style="transition:0.5s;">
+    <script src='https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animated-scroll-to@1.1.8/animated-scroll-to.min.js"></script>
+
+    <center>
+
+        <div class="page" style="background:#bbdefb">
+            <div class="content">
+                <img onclick="play()" style="height:100px;width:100px;animation:lac 1s infinite;animation-direction: alternate;" src="img/gift.png"
+                />
+                <br>
+                <span class="wow bounceIn center text">Click vào món quá nhé</span>
+            </div>
+        </div>
+
+        <div class="page" style="background:#80deea">
+            <div class="content">
+                <span class="wow bounceInUp text" style="background:#4caf50">26/2/1996</span>
+                <span class="wow fadeIn text" data-wow-duration="2s" data-wow-delay="1s" style="background:#4caf50">Khác với giấy khai sinh đấy :/</span>
+            </div>
+        </div>
+
+        <div class="page" style="background:#ffcdd2">
+            <div class="content">
+                <span class="wow bounceInUp text" style="background:#ce93d8">Có một con người đặc biệt</span>
+                <span data-wow-duration="1s" data-wow-delay="1s" class="wow fadeIn text" style="background:#ce93d8">Được sinh ra...</span>
+
+            </div>
+        </div>
+        <div class="page" style="background:#b2dfdb">
+            <div class="content">
+                <img class="wow fadeIn image" src="img/hoibe.png">
+                <br>
+                <span class="text" style="background:#ce93d8">Một người đặc biệt của đời tôi</span>
+
+            </div>
+        </div>
+
+        <div class="page" style="background:#c8e6c9">
+            <div class="content">
+                <img class="wow fadeIn image" src="img/hoibe2.png">
+
+            </div>
+        </div>
+
+        <div class="page" style="background:#b39ddb">
+            <div class="content">
+                <img class="wow fadeIn image" src="img/matnong.png">
+                <span class="text" style="background:#ce93d8">Ai mặt nọng lái lai</span>
+
+            </div>
+        </div>
+
+        <div class="page" style="background:#a5d6a7">
+            <div class="content">
+                <img class="wow fadeIn image" src="img/c3.png">
+                <span class="text" style="background:#ce93d8">Hotboy trường Bộ</span>
+`
+            </div>
+        </div>
+
+        <div class="page" style="background:#80cbc4">
+            <div class="content">
+                <img class="wow fadeIn image" src="img/kinh.png">
+                <span class="text" style="background:#ce93d8">Kính và đồng hồ là vật bất li thân</span>
+
+            </div>
+        </div>
+
+        <div class="page" style="background:#c5cae9">
+            <div class="content">
+                <img class="wow fadeIn image" src="img/sung.png">
+                <span class="text" style="background:#ce93d8">Chỉ là tỏi tây</span>
+
+            </div>
+        </div>
+
+        <div class="page" style="background:#b39ddb">
+            <div class="content">
+                <img class="wow fadeIn image" src="img/wow.png">
+                <span class="text" style="background:#ce93d8">Wow!</span>
+
+            </div>
+        </div>
+
+        <div class="page" style="background:#ff80ab">
+            <img class="wow fadeInUp" data-wow-duration="3s" style="height:120px;width:auto;" src="img/catball.gif">
+            <div style="color:#fff;text-shadow:1px 1px 1px #233;font-size:19px;" class="content">
+                Chúc chúc chúc
+                <i class="fa fa-heart" style="color:rgb(224, 58, 58);" aria-hidden="true"></i>
+                <br> chúc chúc chúc
+                <br>
+                <br>
+                <span onclick="replay()" class="wow rotateInUpLeft text">Xem lại
+                    <i class="fa fa-refresh" aria-hidden="true"></i>
+                </span>
+            </div>
+        </div>
+
+        <audio id="audio" src="audio.mp3" autoplay></audio>
+</body>
+<script src="js/materialize.min.js"></script>
+<script>
+    window.scrollTo(0, 0);
+    function play() {
+        // window.scrollTo(0, document.body.clientHeight);
+        scroll();
+        setTimeout("scroll()", 6500);
+        setTimeout("scroll()", 10000);
+        setTimeout("scroll()", 15000);
+        setTimeout("scroll()", 20000);
+        setTimeout("scroll()", 25000);
+        setTimeout("scroll()", 30000);
+        setTimeout("scroll()", 36000);
+        setTimeout("scroll()", 42000);
+        setTimeout("scroll()", 48000);
+        setTimeout("scroll()", 54000);
+        document.getElementById("audio").play();
+    }
+    var desiredOffset = 0;
+    function scroll() {
+        const options = {
+            // duration of the scroll per 1000px, default 500
+            speed: 150,
+            minDuration: 550,
+            maxDuration: 1500,
+            element: window,
+            cancelOnUserAction: true,
+            onComplete: function () { }
+        };
+
+        desiredOffset += document.body.clientHeight;
+
+        animateScrollTo(desiredOffset, options);
+
+    }
+    function replay() {
+        desiredOffset = 0;
+        window.scrollTo(0, 0);
+        location.reload();
+    }
+</script>
+<script>
+    new WOW().init();
+</script>
+</body>
+
+</html>
