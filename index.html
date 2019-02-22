@@ -6,8 +6,8 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
     <link rel='stylesheet' href='https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css'>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="css/icon.css" rel="stylesheet">
     <meta name="theme-color" content="#445566" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,30 +20,33 @@
 
     <center>
 
-    <div id="footer">Written by Cuong Tran</div>
+        <div id="footer">Written by Cuong Tran</div>
 
         <div class="page" style="background:#bbdefb">
             <div class="content">
-                <img onclick="play()" style="height:100px;width:100px;animation:lac 1s infinite;animation-direction: alternate;" src="img/gift.png"
-                />
+                <img onclick="play()"
+                    style="height:100px;width:100px;animation:lac 1s infinite;animation-direction: alternate;"
+                    src="img/gift.png" />
                 <br>
                 <span onclick="play()" class="wow bounceIn center text">Click vào món quá nhé</span>
                 <span class="wow bounceIn center text">Song: Happy Birthday To You</span>
-                <span class="wow bounceIn center text">Sung Si Kyung</span> 
+                <span class="wow bounceIn center text">Sung Si Kyung</span>
             </div>
         </div>
 
         <div class="page" style="background:#80deea">
             <div class="content">
                 <span class="wow bounceInUp text" style="background:#4caf50">24/2/1996</span>
-                <span class="wow fadeIn text" data-wow-duration="2s" data-wow-delay="1s" style="background:#4caf50">Khai sinh mồng 6 Tết đấy :/</span>
+                <span class="wow fadeIn text" data-wow-duration="2s" data-wow-delay="1s" style="background:#4caf50">Khai
+                    sinh mồng 6 Tết đấy :/</span>
             </div>
         </div>
 
         <div class="page" style="background:#ffcdd2">
             <div class="content">
                 <span class="wow bounceInUp text" style="background:#ce93d8">Có một con người</span>
-                <span data-wow-duration="1s" data-wow-delay="1s" class="wow fadeIn text" style="background:#ce93d8">Được sinh ra...</span>
+                <span data-wow-duration="1s" data-wow-delay="1s" class="wow fadeIn text" style="background:#ce93d8">Được
+                    sinh ra...</span>
 
             </div>
         </div>
@@ -76,7 +79,7 @@
             <div class="content">
                 <img class="wow fadeIn image" src="img/c3.png">
                 <span class="text" style="background:#ce93d8">Hotboy trường Bộ</span>
-`
+                `
             </div>
         </div>
 
@@ -113,12 +116,12 @@
 
         <div class="page" style="background:#80deea">
             <div class="content">
-                    <img class="wow fadeIn image" src="img/santa.png">
+                <img class="wow fadeIn image" src="img/santa.png">
                 <span class="wow bounceInUp text" style="background:#4caf50">Santa Lam</span>
-                        </div>
+            </div>
         </div>
 
-         <div class="page" style="background:#b39ddb">
+        <div class="page" style="background:#b39ddb">
             <div class="content">
                 <img class="wow fadeIn image" src="img/thu.png">
             </div>
@@ -128,7 +131,7 @@
             <div class="content">
                 <img class="wow fadeIn image" src="img/kiyeu.png">
                 <span class="text" style="background:#ce93d8">Hotboy trường Bộ</span>
-`
+                `
             </div>
         </div>
 
@@ -153,6 +156,17 @@
     window.scrollTo(0, 0);
     function play() {
         // window.scrollTo(0, document.body.clientHeight);
+        elem=document.body;
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) { /* Firefox */
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE/Edge */
+            elem.msRequestFullscreen();
+        }
+
         scroll();
         setTimeout("scroll()", 6500);
         setTimeout("scroll()", 10000);
