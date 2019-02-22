@@ -156,17 +156,6 @@
     window.scrollTo(0, 0);
     function play() {
         // window.scrollTo(0, document.body.clientHeight);
-        elem=document.body;
-        if (elem.requestFullscreen) {
-            elem.requestFullscreen();
-        } else if (elem.mozRequestFullScreen) { /* Firefox */
-            elem.mozRequestFullScreen();
-        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-            elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) { /* IE/Edge */
-            elem.msRequestFullscreen();
-        }
-
         scroll();
         setTimeout("scroll()", 6500);
         setTimeout("scroll()", 10000);
